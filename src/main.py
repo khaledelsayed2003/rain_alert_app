@@ -14,10 +14,11 @@ MY_LONG = 28.974800
 parameters = {
     "lat": MY_LAT, 
     "lon": MY_LONG,
-    "appid": MY_OWN_API_KEY
+    "appid": MY_OWN_API_KEY, 
+    "cnt": 4
 }
 
 forecast_3h_response = requests.get("https://api.openweathermap.org/data/2.5/forecast", params= parameters)
 forecast_3h_response.raise_for_status()
-data = forecast_3h_response.json()
-print(data)
+weather_data = forecast_3h_response.json()
+print(weather_data)
