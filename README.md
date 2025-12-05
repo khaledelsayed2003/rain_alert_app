@@ -44,38 +44,41 @@ I used config/.env.example as a template. The .env file should define:
 
 ## 🛠 Installation & Setup
 
-- 1.Clone the repo
+- 1. Clone the repo
     - git clone https://github.com/khaledelsayed2003/rain_alert_app.git
     - cd rain_alert_app
 
-- 2.Create and activate a virtual environment (recommended)
+
+- 2. Create and activate a virtual environment (recommended)
     - python -m venv .venv
-    - # Windows:
+    - ## Windows:
       - .venv\Scripts\activate
-    - # macOS / Linux:
+    - ## macOS / Linux:
       - source .venv/bin/activate
 
-- 3.Install dependencies
+
+- 3. Install dependencies
     - pip install -r requirements.txt
 
 
-- 4.Create your .env file
+- 4. Create your .env file
     - copy config\.env.example config\.env      # Windows
-    - # or
+    -  ## or
     - cp config/.env.example config/.env        # macOS / Linux
     
-    - Then open config/.env and fill in your real values:
+       - Then open config/.env and fill in your real values:
 
-        - WEATHER_API_KEY – from OpenWeatherMap
+            - WEATHER_API_KEY – from OpenWeatherMap
 
-        - TWILIO_ACCOUNT_SID – from your Twilio console
+            - TWILIO_ACCOUNT_SID – from your Twilio console
 
-        - TWILIO_AUTH_TOKEN – from your Twilio console
+            - TWILIO_AUTH_TOKEN – from your Twilio console
 
-        - PHONE_NUMBER – the phone number that will receive the SMS
+            - PHONE_NUMBER – the phone number that will receive the SMS
 
 
-- 5.Configure Twilio trial number
+
+- 5. Configure Twilio trial number
     - Make sure your Twilio trial phone number is allowed to send SMS to your PHONE_NUMBER.
     - In src/main.py, the from_ field must be your Twilio number, for example:
         - message = client.messages.create(
@@ -120,7 +123,7 @@ Developed as part of a Python learning.
 ```bash
 rain_alert_app/
 ├─ config/
-│  ├─ .env              # My real secrets (NOT committed)
+│  ├─ .env              # real secrets (NOT committed)
 │  └─ .env.example      # template with variable names only
 ├─ src/
 │  ├─ main.py           # main script (rain check + SMS send)
@@ -134,4 +137,3 @@ rain_alert_app/
 └─ requirements.txt
 
 
----
