@@ -44,12 +44,12 @@ I used config/.env.example as a template. The .env file should define:
 
 ## 🛠 Installation & Setup
 
-- 1. Clone the repo
+- 1.Clone the repo
     - git clone https://github.com/khaledelsayed2003/rain_alert_app.git
     - cd rain_alert_app
 
 
-- 2. Create and activate a virtual environment (recommended)
+- 2.Create and activate a virtual environment (recommended)
     - python -m venv .venv
     - ## Windows:
       - .venv\Scripts\activate
@@ -57,11 +57,11 @@ I used config/.env.example as a template. The .env file should define:
       - source .venv/bin/activate
 
 
-- 3. Install dependencies
+- 3.Install dependencies
     - pip install -r requirements.txt
 
 
-- 4. Create your .env file
+- 4.Create your .env file
     - copy config\.env.example config\.env      # Windows
     -  ## or
     - cp config/.env.example config/.env        # macOS / Linux
@@ -78,7 +78,7 @@ I used config/.env.example as a template. The .env file should define:
 
 
 
-- 5. Configure Twilio trial number
+- 5.Configure Twilio trial number
     - Make sure your Twilio trial phone number is allowed to send SMS to your PHONE_NUMBER.
     - In src/main.py, the from_ field must be your Twilio number, for example:
         - message = client.messages.create(
