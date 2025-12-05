@@ -21,6 +21,9 @@ MY_LONG = 28.771965
 
 # Number of 3-hour forecast intervals to retrieve (4 intervals ≈ 12 hours)
 forecast_count = 4
+
+# Load my real phone number from the .env file.
+phone_number = os.getenv("PHONE_NUMBER")
     
 parameters = {
     "lat": MY_LAT, 
@@ -41,7 +44,7 @@ for iteration in range(forecast_count):
         message = client.messages.create(
             body="☔ Rain is expected soon. Please bring an umbrella, Mr. Khaled.",
             from_="+16105107634",
-            to="+905010823454",
+            to=phone_number,
         )
         break # Stop checking further forecasts to avoid repeated notifications
     
