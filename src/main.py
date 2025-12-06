@@ -19,8 +19,8 @@ client = Client(account_sid, auth_token)
 MY_LAT = 40.991309
 MY_LONG = 28.771965
 
-# Number of 3-hour forecast intervals to retrieve (4 intervals ≈ 12 hours)
-forecast_count = 4
+# Number of 3-hour forecast intervals to retrieve (6 intervals ≈ 18 hours)
+forecast_count = 6  # IF IT RUNS AT 6AM IT WILL (Covers 6:00 AM, 9:00 AM, 12:00 PM, 3:00 PM, 6:00 PM, and 9:00 PM).
 
 # Load my real phone number from the .env file.
 phone_number = os.getenv("PHONE_NUMBER")
