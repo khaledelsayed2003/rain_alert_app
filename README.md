@@ -9,7 +9,7 @@ This project was built for learning purposes: APIs, environment variables, and b
 ## ✨ Features
 
 - Fetches 3-hour forecast data from **OpenWeatherMap**
-- Checks several upcoming time slots (e.g. next **12 hours**)
+- Checks several upcoming time slots (e.g. next **18 hours**)
 - Detects rain/snow/drizzle/thunderstorm based on weather condition codes
 - Sends an SMS like:
 
@@ -99,7 +99,7 @@ I used config/.env.example as a template. The .env file should define:
         - MY_LONG = 28.771965
 
    - Forecast horizon – how many 3-hour periods to check:
-        - forecast_count = 4  # 4 x 3h = next 12 hours
+        - forecast_count = 6  # 6 x 3h = next 18 hours
 
    - Alert message – edit the body parameter in client.messages.create(...).
 
