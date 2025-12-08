@@ -16,6 +16,7 @@ This project was built for learning purposes: APIs, environment variables, and b
 > ☔ Rain is expected soon. Please bring an umbrella, Mr. Khaled.
 
 - Uses **environment variables** for all secrets (API keys, tokens, phone number)
++ Hosted in the cloud ☁️ and runs automatically every day (03:00 UTC / 06:00 Istanbul)
 
 ---
 
@@ -25,6 +26,7 @@ This project was built for learning purposes: APIs, environment variables, and b
 - [requests](https://pypi.org/project/requests/) – for HTTP requests
 - [python-dotenv](https://pypi.org/project/python-dotenv/) – for loading `.env` file
 - [Twilio Python Helper Library](https://www.twilio.com/docs/libraries/python)
++ Automated runtime on cloud (PythonAnywhere) – runs daily at 03:00 UTC (06:00 am in Istanbul's time)
 
 ---
 
@@ -40,8 +42,18 @@ I used config/.env.example as a template. The .env file should define:
 - PHONE_NUMBER=your_real_phone_number_in_e164_format   # e.g. +905xxxxxxxxx
 
 ---
+## 🌩️ Cloud Automation
+
+This app is hosted on **PythonAnywhere** and runs **automatically every day**.
+
+> 🕒 Schedule: **03:00 UTC** (corresponds to **06:00 in Istanbul** time)
+
+It executes even when your PC is OFF — checks the weather, and **sends SMS alerts** if rain is expected.  
+An image is included in the assets/images folder to show that the app runs in the cloud:
+    - src/assets/images/Run_by_itself.png
 
 
+---
 ## 🛠 Installation & Setup
 
 - 1.Clone the repo
@@ -131,6 +143,7 @@ rain_alert_app/
 │     └─ images/
 │        ├─ sms_rain_alert_conversation.png
 │        └─ sms_rain_alert_notification.png
+│       +└─ Runs_by_itself.png   # badge showing cloud automation
 ├─ .gitignore
 ├─ LICENSE
 ├── README.md
